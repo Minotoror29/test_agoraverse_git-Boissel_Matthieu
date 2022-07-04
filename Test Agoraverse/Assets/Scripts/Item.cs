@@ -8,5 +8,19 @@ public class Item : MonoBehaviour
 
     public GameObject itemPreview;
 
-    public List<Material> materials;
+    [SerializeField] private List<Material> materials;
+    private int material = 0;
+
+    public void ChangeMaterial()
+    {
+        if (material < materials.Count - 1)
+        {
+            material++;
+        } else
+        {
+            material = 0;
+        }
+
+        mRenderer.material = materials[material];
+    }
 }

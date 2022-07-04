@@ -61,7 +61,7 @@ public class PlaceItem : MonoBehaviour
                     Destroy(hit.transform.gameObject);
                 } else if (Input.GetMouseButtonDown(1))
                 {
-
+                    hit.transform.GetComponent<Item>().ChangeMaterial();
                 }
             }
         }
